@@ -100,13 +100,13 @@ You can customize the animation's behavior by defining a `window.p5AnimationConf
       startEnabled: false
     };
 </script>
-
+```
 
 targetButtonSelector: (Required) A CSS selector string that uniquely identifies the button element you want the tickets to target. If this button doesn't exist in the HTML when the script runs, the attraction behavior won't work.
 
 startEnabled: (Optional) Set to true to have the animation active immediately on page load (only applies to desktop screens). Defaults to false.
 
-How It Works (Briefly)
+## How It Works (Briefly)
 
 The script runs inside an IIFE (Immediately Invoked Function Expression) to avoid polluting the global scope.
 
@@ -124,7 +124,7 @@ Event listeners are added to the specified target button (mouseover, mouseout) a
 
 A resize listener on the window helps manage the animation state when switching between mobile and desktop views.
 
-Notes & Considerations
+## Notes & Considerations
 
 Mobile Behavior: The activation toggle switch is hidden (display: none;) on screens narrower than 768px using a CSS media query. The animation script also checks the screen width and will not start (or will stop if running) on these smaller screens.
 
@@ -133,13 +133,3 @@ Target Button: The HTML element specified by targetButtonSelector must exist in 
 Performance: While optimized, running complex animations with many elements can still impact performance on less powerful devices. The number of tickets (numTickets) is currently set internally within the script but could be made configurable if needed.
 
 Dependencies: This script absolutely depends on the p5.js library being loaded first.
-
-License
-
-(You can add license information here, e.g., MIT License)
-
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-IGNORE_WHEN_COPYING_END
