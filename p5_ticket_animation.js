@@ -68,7 +68,7 @@
     toggleContainer.className = toggleContainerClass;
     toggleContainer.innerHTML = `
         <input type="checkbox" id="${toggleCheckboxId}" ${startEnabled ? 'checked' : ''}>
-        <label for="${toggleCheckboxId}">Activate Animation</label>
+        <label for="${toggleCheckboxId}">🎟️ Magic</label>
     `;
     // Append toggle to body. It's position:fixed anyway.
     document.body.appendChild(toggleContainer);
